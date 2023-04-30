@@ -4,6 +4,7 @@ import Particles from "react-particles";
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import ProjectCard from "@/components/projectCard";
 
 export const Home = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -101,8 +102,8 @@ export const Home = () => {
           detectRetina: true,
         }}
       />
-      <div className="min-h-screen min-w-screen">
-        <div className="flex gap-8 p-4 justify-center relative z-1">
+      <div className="min-h-screen min-w-screen mb-4">
+        <div className="flex flex-col md:flex-row gap-8 p-4 justify-center relative z-1">
           <div className="avatar">
             <div className="w-40">
               <Image
@@ -138,8 +139,48 @@ export const Home = () => {
           </div>
         </div>
         <div className="relative z-1">
-          <p>bio here</p>
-          <div className="divider"></div>
+          <p>Total MRR: $0</p>
+          <br />
+          <p>
+            Hey, I'm a CPA and Software Engineer trying to dive into the world
+            of Indie Hacking. On this page you'll find a collection of all the
+            projects I've worked on over the years.
+          </p>
+          <div className="divider ml-8 mr-8"></div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <ProjectCard
+            title="Twitter Follow Groups"
+            description="A tool that allows you to create groups of Twitter users and follow them all with one click."
+            link="https://google.com" // placeholder for now
+            icon="icon"
+            mrr={0}
+            status="In Development"
+          />
+          <ProjectCard
+            title="Twitter Follow Groups"
+            description="A tool that allows you to create groups of Twitter users and follow them all with one click."
+            link="https://google.com" // placeholder for now
+            icon="icon"
+            mrr={0}
+            status="In Development"
+          />
+          <ProjectCard
+            title="Twitter Follow Groups"
+            description="A tool that allows you to create groups of Twitter users and follow them all with one click."
+            link="https://google.com" // placeholder for now
+            icon="icon"
+            mrr={0}
+            status="In Development"
+          />
+          <ProjectCard
+            title="Twitter Follow Groups"
+            description="A tool that allows you to create groups of Twitter users and follow them all with one click."
+            link="https://google.com" // placeholder for now
+            icon="icon"
+            mrr={0}
+            status="In Development"
+          />
         </div>
       </div>
     </main>
