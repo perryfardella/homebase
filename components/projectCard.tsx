@@ -24,7 +24,7 @@ export const ProjectCard = ({
   return (
     <div
       onClick={openLink}
-      className="card bg-slate-200 shadow-lg cursor-pointer transition-all duration-200 hover:scale-105 max-w-5xl ml-8 mr-8"
+      className="card bg-slate-200 shadow-lg cursor-pointer transition-all duration-200 hover:scale-105 max-w-5xl w-full"
     >
       <div className="card-body p-4">
         <div className="flex items-center">

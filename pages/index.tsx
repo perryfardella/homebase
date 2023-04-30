@@ -6,6 +6,8 @@ import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import ProjectCard from "@/components/projectCard";
 
+//TODO: Drop all margins on mobile to half, ie. 2rem instead of 4
+
 export const Home = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
@@ -102,21 +104,21 @@ export const Home = () => {
           detectRetina: true,
         }}
       />
-      <div className="min-h-screen min-w-screen mb-4">
-        <div className="flex flex-col md:flex-row gap-8 p-4 justify-center relative z-1">
+      <div className="flex flex-col min-h-screen min-w-screen mb-4">
+        <div className="flex flex-col m-8 md:flex-row items-center md:items-flex-start gap-8 justify-center relative z-1">
           <div className="avatar">
             <div className="w-40">
               <Image
                 src="/images/perry.png"
                 alt="an image of Perry"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                height="400"
+                width="400"
                 className="rounded-full"
               />
             </div>
           </div>
           <div className="flex flex-col gap-2 justify-center">
-            <h1>Perry Fardella</h1>
+            <h1 className="text-2xl">Perry Fardella</h1>
             <h2>📍 Perth, Western Australia</h2>
             <div className="flex gap-4">
               <SocialIcon
@@ -138,20 +140,19 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-1">
-          <p>Total MRR: $0</p>
-          <br />
+        <div className="flex flex-col self-center relative z-1 ml-8 mr-8 mt-8 max-w-5xl gap-4">
+          <p className="text-2xl">Total MRR: $0</p>
           <p>
             Hey, I'm a CPA and Software Engineer trying to dive into the world
             of Indie Hacking. On this page you'll find a collection of all the
             projects I've worked on over the years.
           </p>
-          <div className="divider ml-8 mr-8"></div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex self-center w-full relative z-1 divider ml-8 mr-8 max-w-5xl" />
+        <div className="flex flex-col items-center gap-4 ml-8 mr-8">
           <ProjectCard
             title="Twitter Follow Groups"
-            description="A tool that allows you to create groups of Twitter users and follow them all with one click."
+            description="A tool that allows tdtctfvyby fyuftyfht tyhtyufbtuf tfutyfu tfntuftugu tuntufu  fnyt you to create groups of Twitter users and follow them all with one click."
             link="https://google.com" // placeholder for now
             icon="icon"
             mrr={0}
